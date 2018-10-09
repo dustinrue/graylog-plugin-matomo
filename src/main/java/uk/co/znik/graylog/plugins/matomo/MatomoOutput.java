@@ -71,7 +71,7 @@ public class MatomoOutput implements MessageOutput {
         String remote_addr = (String) message.getField("remote_addr");
         String http_user_agent = (String) message.getField("http_user_agent");
         String http_referrer = (String) message.getField("http_referrer");
-        String time_iso8601 = (String) message.getField("time_iso8601");
+        String time_iso8601 = (String) message.getField("timestamp");
 
         String visitorId = DigestUtils.sha1Hex(remote_addr+http_user_agent).substring(0,16);
 

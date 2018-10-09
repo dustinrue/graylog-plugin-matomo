@@ -16,6 +16,8 @@ cache:
 
 build:
   stage: build
+  tags:
+    - docker
   script:
     - mvn $MAVEN_CLI_OPTS compile
     - mvn $MAVEN_CLI_OPTS package
